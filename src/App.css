@@ -1,38 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 1rem;
+  text-transform: capitalize;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.searchSection {
+  flex: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: cadetblue;
+  color: #fff;
+  padding: 2rem;
+  gap: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dealsSection {
+  width: 100%;
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input,
+button {
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  margin: 20px;
+  font-size: 22px;
+  padding-inline: 20px;
+  outline: none;
+  text-transform: inherit;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #dad8d8;
+}
+
+.games {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+}
+
+.game {
+  min-width: min-content;
+  width: 100px;
+  max-height: 100%;
+  margin: 20px;
+  border-radius: 7px;
+  background-color: #f2f2f2;
+  color: #000;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-basis: 100%;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.game img {
+  width: 150px;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dealsSection .game {
+  background-color: rgba(23, 137, 141, 0.863);
+  color: #fff;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
